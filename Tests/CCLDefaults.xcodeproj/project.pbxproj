@@ -8,36 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		5F0E12D9B27A409D8D3ACC2C /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05ABA2235C2F4A9785D3247F /* libPods-ios.a */; };
-		77C97EF517CD56E600081C26 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C97EF417CD56E600081C26 /* XCTest.framework */; };
+		77B5EC0417CDFE72005E50DB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B5EC0317CDFE71005E50DB /* SenTestingKit.framework */; };
+		77B5EC0517CDFE7C005E50DB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B5EC0317CDFE71005E50DB /* SenTestingKit.framework */; };
 		77C97EFB17CD56E600081C26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77C97EF917CD56E600081C26 /* InfoPlist.strings */; };
 		77C97EFD17CD56E600081C26 /* OS_X_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C97EFC17CD56E600081C26 /* OS_X_Tests.m */; };
 		77C97F1117CD56F800081C26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77C97F0F17CD56F800081C26 /* InfoPlist.strings */; };
 		77C97F1317CD56F800081C26 /* iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C97F1217CD56F800081C26 /* iOS_Tests.m */; };
 		77C97F1B17CD576000081C26 /* CCLDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C97F1A17CD576000081C26 /* CCLDefaultsTests.m */; };
 		77C97F1C17CD576000081C26 /* CCLDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C97F1A17CD576000081C26 /* CCLDefaultsTests.m */; };
-		77C97F1D17CD5C0700081C26 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C97EF417CD56E600081C26 /* XCTest.framework */; };
 		87A4B23E90B647B0BEB21745 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B16CEAAAD24165A78C27EB /* libPods-osx.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05ABA2235C2F4A9785D3247F /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A2D0A2566A41389A1A331A /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = SOURCE_ROOT; };
+		77B5EC0317CDFE71005E50DB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		77C97EF117CD56E600081C26 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		77C97EF417CD56E600081C26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		77C97EF817CD56E600081C26 /* OS X Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OS X Tests-Info.plist"; sourceTree = "<group>"; };
 		77C97EFA17CD56E600081C26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77C97EFC17CD56E600081C26 /* OS_X_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS_X_Tests.m; sourceTree = "<group>"; };
 		77C97EFE17CD56E600081C26 /* OS X Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OS X Tests-Prefix.pch"; sourceTree = "<group>"; };
 		77C97F0617CD56F800081C26 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C97F0817CD56F800081C26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		77C97F0A17CD56F800081C26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		77C97F0E17CD56F800081C26 /* iOS Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS Tests-Info.plist"; sourceTree = "<group>"; };
 		77C97F1017CD56F800081C26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77C97F1217CD56F800081C26 /* iOS_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_Tests.m; sourceTree = "<group>"; };
 		77C97F1417CD56F800081C26 /* iOS Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS Tests-Prefix.pch"; sourceTree = "<group>"; };
 		77C97F1A17CD576000081C26 /* CCLDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLDefaultsTests.m; sourceTree = "<group>"; };
 		77C97F1E17CD5C0C00081C26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		77C97F2017CD5C1D00081C26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		90B16CEAAAD24165A78C27EB /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F8941C11BC48A880D7A629 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -47,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77C97EF517CD56E600081C26 /* XCTest.framework in Frameworks */,
+				77B5EC0517CDFE7C005E50DB /* SenTestingKit.framework in Frameworks */,
 				87A4B23E90B647B0BEB21745 /* libPods-osx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77C97F1D17CD5C0700081C26 /* XCTest.framework in Frameworks */,
+				77B5EC0417CDFE72005E50DB /* SenTestingKit.framework in Frameworks */,
 				5F0E12D9B27A409D8D3ACC2C /* libPods-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,11 +87,9 @@
 		77C97EF317CD56E600081C26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77C97F2017CD5C1D00081C26 /* UIKit.framework */,
+				77B5EC0317CDFE71005E50DB /* SenTestingKit.framework */,
 				77C97F1E17CD5C0C00081C26 /* Foundation.framework */,
-				77C97EF417CD56E600081C26 /* XCTest.framework */,
 				77C97F0817CD56F800081C26 /* Foundation.framework */,
-				77C97F0A17CD56F800081C26 /* UIKit.framework */,
 				05ABA2235C2F4A9785D3247F /* libPods-ios.a */,
 				90B16CEAAAD24165A78C27EB /* libPods-osx.a */,
 			);
@@ -458,8 +454,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -508,8 +503,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -6,9 +6,9 @@
 //
 //
 
-#import <XCTest/XCTest.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-@interface OS_X_Tests : XCTestCase
+@interface OS_X_Tests : SenTestCase
 
 @end
 

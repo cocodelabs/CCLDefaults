@@ -6,7 +6,7 @@
 //  Copyright (c) 2012-2013 Cocode. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <SenTestingKit/SenTestingKit.h>
 
 #define EXP_SHORTHAND YES
 #import "Expecta.h"
@@ -35,7 +35,7 @@
 @end
 
 
-@interface CCLDefaultsTests : XCTestCase
+@interface CCLDefaultsTests : SenTestCase
 
 @end
 
@@ -53,21 +53,17 @@
     expect([defaults bundle]).to.equal(bundle);
 }
 
-- (void)testInitWithNilUserDefaultsRaisesException {
-    expect(^{ (void)[[CCLDefaults alloc] initWithUserDefaults:nil ubiquitousKeyValueStore:[NSUbiquitousKeyValueStore defaultStore] bundle:nil]; }).to.raiseAny();
-}
+//- (void)testInitWithNilUserDefaultsRaisesException {
+//    expect(^{ (void)[[CCLDefaults alloc] initWithUserDefaults:nil ubiquitousKeyValueStore:nil bundle:[NSBundle mainBundle]]; }).to.raiseAny();
+//}
 
-- (void)testInitWithNilUbiquitousKeyValueStoreRaisesException {
-    expect(^{ (void)[[CCLDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults] ubiquitousKeyValueStore:nil bundle:nil]; }).to.raiseAny();
-}
+//- (void)testInitWithNilBundleRaisesException {
+//    expect(^{ (void)[[CCLDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults] ubiquitousKeyValueStore:nil bundle:nil]; }).to.raiseAny();
+//}
 
-- (void)testInitWithNilBundleRaisesException {
-    expect(^{ (void)[[CCLDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults] ubiquitousKeyValueStore:[NSUbiquitousKeyValueStore defaultStore] bundle:nil]; }).to.raiseAny();
-}
-
-- (void)testRegistersForUbiquitousKeyValueStoreDidChangeNotification {
-
-}
+//- (void)testRegistersForUbiquitousKeyValueStoreDidChangeNotification {
+//
+//}
 
 - (void)testNewInstallCallsUpgradeStoreForExistingVersion0 {
     NSUbiquitousKeyValueStore *keyValueStore = [NSUbiquitousKeyValueStore defaultStore];
