@@ -3,6 +3,8 @@ CCLDefaults
 
 [![Build Status](https://travis-ci.org/cocodelabs/CCLDefaults.png?branch=master)](https://travis-ci.org/cocodelabs/CCLDefaults)
 
+A simple NSUserDefaults wrapper which optionally syncs to iCloud.
+
 ## Usage
 
 You can either use CCLDefaults directly, or subclass it to provide methods for
@@ -49,7 +51,7 @@ CCLExampleDefaults *defaults = [[CCLExampleDefaults alloc] init];
 If you want to have initial values for your keys, then you can either create a
 plist called `CCLDefaults.plist` or override `defaultsDictionary`.
 
-#### `CCLDefaults.plist`
+#### CCLDefaults.plist
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -64,7 +66,7 @@ plist called `CCLDefaults.plist` or override `defaultsDictionary`.
 </plist>
 ```
 
-#### `defaultsDictionary`
+#### defaultsDictionary
 
 ```objective-c
 - (NSDictionary *)defaultsDictionary {
