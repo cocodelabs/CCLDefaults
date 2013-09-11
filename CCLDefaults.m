@@ -94,10 +94,10 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
     NSNumber *versionNumber = [userDefaults objectForKey:CCLStoreVersionKey];
 
     NSDictionary *infoDictionary = [_bundle infoDictionary];
-    NSInteger currentVersion = [[infoDictionary valueForKey:@"CFBundleVersion"] integerValue];
+    NSUInteger currentVersion = (NSUInteger)[[infoDictionary valueForKey:@"CFBundleVersion"] unsignedIntegerValue];
 
     if (versionNumber) {
-        NSInteger version = [versionNumber integerValue];
+        NSUInteger version = [versionNumber unsignedIntegerValue];
 
         if (version != currentVersion) {
             [self upgradeFromVersion:version toVersion:currentVersion];
@@ -110,7 +110,7 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
 }
 
 - (void)upgradeFromVersion:(NSUInteger)existingVersion toVersion:(NSUInteger)newVersion {
-    NSLog(@"CCLDefaults: Upgrading from version %d to %d", existingVersion, newVersion);
+    NSLog(@"CCLDefaults: Upgrading from version %ud to %ud", existingVersion, newVersion);
 }
 
 - (void)setObject:(id)object forKey:(NSString *)key {
