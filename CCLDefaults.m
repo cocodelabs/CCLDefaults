@@ -124,13 +124,30 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
     [self didChangeValueForKey:key];
 }
 
+- (void)removeObjectForKey:(NSString *)key {
+    [[self userDefaults] removeObjectForKey:key];
+    [[self ubiquitousKeyValueStore] removeObjectForKey:key];
+}
+
+#pragma mark - Getters
+
 - (id)objectForKey:(NSString *)key {
     return [[self userDefaults] objectForKey:key];
 }
 
-- (void)removeObjectForKey:(NSString *)key {
-    [[self userDefaults] removeObjectForKey:key];
-    [[self ubiquitousKeyValueStore] removeObjectForKey:key];
+- (id)objectOfClass:(Class)aClass forKey:(NSString *)key {
+    id value = [[self userDefaults] objectForKey:key];
+    id object;
+
+    if ([value isKindOfClass:aClass]) {
+        object = value;
+    }
+
+    return object;
+}
+
+- (BOOL)boolForKey:(NSString *)key {
+    return [[self userDefaults] boolForKey:key];
 }
 
 @end

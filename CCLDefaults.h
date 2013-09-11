@@ -46,6 +46,12 @@
 /** Retrieve the object associated with the key in the user defaults or the defaults dictionary */
 - (id)objectForKey:(NSString *)key;
 
+/** Gets a value of a specific type. */
+- (id)objectOfClass:(Class)aClass forKey:(NSString *)key;
+
+/** Returns the Boolean value associated with the specified key/ */
+- (BOOL)boolForKey:(NSString *)key;
+
 /** Removes the value associated with the specified key from defaults. */
 - (void)removeObjectForKey:(NSString *)key;
 
