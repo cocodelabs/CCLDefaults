@@ -46,6 +46,10 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification object:_ubiquitousKeyValueStore];
+
+    if ([[self userDefaults] synchronize] == NO) {
+        NSLog(@"CLLDefaults: Failed to synchronize user defaults");
+    }
 }
 
 - (NSString *)defaultsFile {
