@@ -150,4 +150,17 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
     return [[self userDefaults] boolForKey:key];
 }
 
+#pragma mark - Object subscripting
+
+- (id)objectForKeyedSubscript:(id <NSCopying>)key {
+    return [[self userDefaults] objectForKey:key];
+}
+
+- (void)setObject:(id)object forKeyedSubscript:(id <NSCopying>)key {
+    [self willChangeValueForKey:key];
+    [[self userDefaults] setObject:object forKey:key];
+    [[self ubiquitousKeyValueStore] setObject:object forKey:key];
+    [self didChangeValueForKey:key];
+}
+
 @end
