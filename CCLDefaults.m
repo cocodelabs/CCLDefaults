@@ -128,4 +128,9 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
     return [[self userDefaults] objectForKey:key];
 }
 
+- (void)removeObjectForKey:(NSString *)key {
+    [[self userDefaults] removeObjectForKey:key];
+    [[self ubiquitousKeyValueStore] removeObjectForKey:key];
+}
+
 @end

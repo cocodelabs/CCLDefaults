@@ -46,5 +46,8 @@
 /** Retrieve the object associated with the key in the user defaults or the defaults dictionary */
 - (id)objectForKey:(NSString *)key;
 
+/** Removes the value associated with the specified key from defaults. */
+- (void)removeObjectForKey:(NSString *)key;
+
 @end
 
