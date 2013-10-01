@@ -11,4 +11,4 @@ test-ios:
 test-podspec:
 	pod lib lint
 
-test: test-osx test-ios test-podspec
+test: test-osx test-podspec
