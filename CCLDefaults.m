@@ -114,7 +114,7 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
 }
 
 - (void)upgradeFromVersion:(NSUInteger)existingVersion toVersion:(NSUInteger)newVersion {
-    NSLog(@"CCLDefaults: Upgrading from version %ud to %ud", existingVersion, newVersion);
+    NSLog(@"CCLDefaults: Upgrading from version %lu to %lu", (unsigned long)existingVersion, (unsigned long)newVersion);
 }
 
 - (void)setObject:(id)object forKey:(NSString *)key {
@@ -153,14 +153,22 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
 #pragma mark - Object subscripting
 
 - (id)objectForKeyedSubscript:(id <NSCopying>)key {
-    return [[self userDefaults] objectForKey:key];
+    id object;
+
+    if ([(NSObject *)key isKindOfClass:[NSString class]]) {
+        object = [[self userDefaults] objectForKey:(NSString *)key];
+    }
+
+    return object;
 }
 
 - (void)setObject:(id)object forKeyedSubscript:(id <NSCopying>)key {
-    [self willChangeValueForKey:key];
-    [[self userDefaults] setObject:object forKey:key];
-    [[self ubiquitousKeyValueStore] setObject:object forKey:key];
-    [self didChangeValueForKey:key];
+    if ([(NSObject *)key isKindOfClass:[NSString class]]) {
+        [self willChangeValueForKey:(NSString *)key];
+        [[self userDefaults] setObject:object forKey:(NSString *)key];
+        [[self ubiquitousKeyValueStore] setObject:object forKey:(NSString *)key];
+        [self didChangeValueForKey:(NSString *)key];
+    }
 }
 
 @end
