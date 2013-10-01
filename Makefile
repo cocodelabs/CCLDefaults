@@ -9,6 +9,6 @@ test-ios:
 	xctool -scheme 'iOS Tests' test -test-sdk iphonesimulator -sdk iphonesimulator -configuration Release
 
 test-podspec:
-	pod spec lint CCLDefaults.podspec
+	pod lib lint
 
 test: test-osx test-ios test-podspec
