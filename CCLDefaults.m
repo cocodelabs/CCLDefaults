@@ -98,7 +98,8 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
     NSNumber *versionNumber = [userDefaults objectForKey:CCLStoreVersionKey];
 
     NSDictionary *infoDictionary = [_bundle infoDictionary];
-    NSUInteger currentVersion = (NSUInteger)[[infoDictionary valueForKey:@"CFBundleVersion"] unsignedIntegerValue];
+    NSString *versionString = [infoDictionary valueForKey:@"CFBundleVersion"];
+    NSUInteger currentVersion = [@([versionString integerValue]) unsignedIntegerValue];
 
     if (versionNumber) {
         NSUInteger version = [versionNumber unsignedIntegerValue];

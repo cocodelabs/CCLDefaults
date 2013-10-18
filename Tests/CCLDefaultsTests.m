@@ -71,7 +71,7 @@
     id mockBundle = [OCMockObject mockForClass:[NSBundle class]];
 
     [[[mockUserDefaults expect] andReturn:nil] objectForKey:@"CCLStoreVersion"];
-    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @1}] infoDictionary];
+    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @"1"}] infoDictionary];
     [[mockUserDefaults expect] setObject:@1 forKey:@"CCLStoreVersion"];
 
     CCLDefaults *defaults = [[CCLTestDefaults alloc] initWithUserDefaults:mockUserDefaults ubiquitousKeyValueStore:keyValueStore bundle:mockBundle];
@@ -89,7 +89,7 @@
     id mockBundle = [OCMockObject mockForClass:[NSBundle class]];
 
     [[[mockUserDefaults expect] andReturn:@1] objectForKey:@"CCLStoreVersion"];
-    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @2}] infoDictionary];
+    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @"2"}] infoDictionary];
 
     CCLDefaults *defaults = [[CCLTestDefaults alloc] initWithUserDefaults:mockUserDefaults ubiquitousKeyValueStore:keyValueStore bundle:mockBundle];
 
@@ -106,7 +106,7 @@
     id mockBundle = [OCMockObject mockForClass:[NSBundle class]];
 
     [[[mockUserDefaults expect] andReturn:@2] objectForKey:@"CCLStoreVersion"];
-    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @2}] infoDictionary];
+    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @"2"}] infoDictionary];
 
     CCLDefaults *defaults = [[CCLTestDefaults alloc] initWithUserDefaults:mockUserDefaults ubiquitousKeyValueStore:keyValueStore bundle:mockBundle];
 
@@ -122,7 +122,7 @@
     id mockUserDefaults = [OCMockObject partialMockForObject:[NSUserDefaults standardUserDefaults]];
     id mockBundle = [OCMockObject mockForClass:[NSBundle class]];
 
-    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @5}] infoDictionary];
+    [[[mockBundle expect] andReturn:@{@"CFBundleVersion": @"5"}] infoDictionary];
     [[mockUserDefaults expect] setObject:@5 forKey:@"CCLStoreVersion"];
 
     CCLTestDefaults *defaults = [[CCLTestDefaults alloc] initWithUserDefaults:mockUserDefaults ubiquitousKeyValueStore:keyValueStore bundle:mockBundle];
