@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CCLDefaults"
-  s.version      = '1.1'
+  s.version      = '1.1.1'
   s.summary      = "A simple NSUserDefaults wrapper which optionally syncs to iCloud."
   s.homepage     = "https://github.com/cocodelabs/CCLDefaults"
   s.license      = { :type => 'BSD', :file => 'LICENSE' }
