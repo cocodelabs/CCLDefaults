@@ -25,9 +25,8 @@ NSString * const CCLStoreVersionKey = @"CCLStoreVersion";
         _ubiquitousKeyValueStore = ubiquitousKeyValueStore;
         _bundle = bundle;
 
-        NSString *defaultsFile = [self defaultsFile];
-        if (defaultsFile != nil) {
-            NSDictionary *defaults = [NSDictionary dictionaryWithContentsOfFile:defaultsFile];
+        NSDictionary *defaults = [self defaultsDictionary];
+        if (defaults != nil) {
             [userDefaults registerDefaults:defaults];
         }
 
