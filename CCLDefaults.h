@@ -3,7 +3,7 @@
 //  Cocode
 //
 //  Created by Kyle Fuller on 12/08/2012.
-//  Copyright (c) 2012-2013 Cocode. All rights reserved.
+//  Copyright (c) 2012-2014 Cocode. All rights reserved.
 //
 
 
@@ -14,8 +14,13 @@
  */
 @interface CCLDefaults : NSObject
 
+/// Property contains the user defaults set from initialization
 @property (nonatomic, strong, readonly) NSUserDefaults *userDefaults;
+
+/// Property contains the ubiquitous key value store set from initialization
 @property (nonatomic, strong, readonly) NSUbiquitousKeyValueStore *ubiquitousKeyValueStore;
+
+/// Property contains the bundle set from initialization
 @property (nonatomic, strong, readonly) NSBundle *bundle;
 
 /** Initialize CCLDefaults, it will use the standard user defaults, the default ubiquitous key value store and the main bundle. */
