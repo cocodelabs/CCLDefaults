@@ -1,12 +1,8 @@
 test-osx:
-	xctool -scheme 'OS X Tests' build -sdk macosx -configuration Release
-	xctool -scheme 'OS X Tests' build-tests -sdk macosx -configuration Release
-	xctool -scheme 'OS X Tests' test -test-sdk macosx -sdk macosx -configuration Release
+	xcodebuild -workspace CCLDefaults.xcworkspace -scheme 'OS X Tests' test | xcpretty -c; exit ${PIPESTATUS[0]}
 
 test-ios:
-	xctool -scheme 'iOS Tests' build -sdk iphonesimulator -configuration Release
-	xctool -scheme 'iOS Tests' build-tests -sdk iphonesimulator -configuration Release
-	xctool -scheme 'iOS Tests' test -test-sdk iphonesimulator -sdk iphonesimulator -configuration Release
+	xcodebuild -workspace CCLDefaults.xcworkspace -scheme 'iOS Tests' test | xcpretty -c; exit ${PIPESTATUS[0]}
 
 test-podspec:
 	pod lib lint
